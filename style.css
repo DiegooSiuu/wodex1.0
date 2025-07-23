@@ -1,0 +1,487 @@
+/* Reset básico */
+body, h1, h2, p, form {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #363535; /* Gris oscuro */
+  color: #ffffff; /* Texto blanco para contraste */
+}
+
+
+header {
+  background: #000;
+  color: #fff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-container img.logo {
+  width: 200px; /* Aumenta el tamaño del logo */
+  height: auto;
+  cursor: pointer;
+}
+
+/* Navegación con botones en texto */
+.main-nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.main-nav button {
+  background: transparent;
+  color: #fff;
+  border: 2px solid transparent;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.main-nav button:hover {
+  border-bottom: 2px solid #ffcc00;
+  color: #ffcc00;
+}
+
+
+/* Secciones */
+.section {
+  display: none;
+  padding: 40px 20px;
+}
+
+.section.active {
+  display: block;
+}
+
+.image-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.menu-item {
+  position: relative;
+  width: 95%;
+  max-width: 800px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  opacity: 1; /* Sin transparencia */
+  border-radius: 12px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover img {
+  transform: scale(1.01);
+}
+
+.overlay-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff; /* Color fuerte y llamativo */
+  color: #000;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 8px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.overlay-button:hover {
+  background-color: #ffc107;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 15px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #333;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+}
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 400px;
+  margin: 0 auto 40px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carousel-image {
+  flex: 0 0 100%;
+  width: 120%;
+  height: 120%;
+  display: block;
+}
+
+/* Flechas */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 36px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
+
+/* Indicadores (opcional) */
+.carousel-indicators {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #ffcc00;
+}
+.about-gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Espacio entre columnas */
+  width: 100%;
+  margin-top: 30px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.about-item {
+  flex: 1;
+  text-align: center;
+  background-color: #ffffff; /* Fondo oscuro elegante */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.about-item:hover {
+  transform: scale(1.03);
+}
+
+.about-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 3px solid #ffffff;
+}
+
+.about-caption {
+  margin: 20px auto 10px;
+  padding: 12px 18px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  color: #000;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .about-gallery {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.about-services {
+  max-width: 1000px;
+  margin: 40px auto 20px;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  font-family: 'Oswald', sans-serif;
+  color: #000;
+  text-align: center;
+}
+
+.about-services h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.about-services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.about-services li {
+  font-size: 18px;
+  margin: 12px 0;
+  padding-left: 10px;
+  position: relative;
+  line-height: 1.5em;
+}
+
+.about-services li::before {
+  
+  position: absolute;
+  left: 0;
+  color: #d11111;
+  font-weight: bold;
+}
+.class-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.class-item {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.class-item:hover {
+  transform: scale(1.01);
+}
+
+.class-item img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-right: 4px solid #d11111;
+}
+
+.class-info {
+  padding: 20px;
+  font-family: 'Oswald', sans-serif;
+  color: #000;
+  flex: 1;
+}
+
+.class-info h3 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #d11111;
+}
+
+.class-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px 0 0;
+}
+.class-text-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.class-text-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  font-family: 'Oswald', sans-serif;
+  color: #1a1a1a; /* Color general del texto más oscuro */
+}
+
+.class-text-item:hover {
+  transform: translateY(-3px);
+}
+
+.class-text-item h3 {
+  font-size: 26px;      /* Título más grande */
+  color: #000000;       /* Color rojo principal */
+  margin-bottom: 15px;
+}
+
+.class-text-item p {
+  font-size: 18px;      /* Texto más grande */
+  line-height: 1.8;
+  color: #853333;       /* Texto más oscuro */
+}
+/* === AJUSTES GENERALES PARA MÓVIL === */
+@media (max-width: 768px) {
+  /* Header y logo */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  header h1 img {
+    max-width: 180px;
+    margin-bottom: 10px;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  header nav button {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  /* Carrusel de inicio o clases */
+  .classes-carousel-container {
+    padding: 10px;
+  }
+
+  .carousel-btn {
+    font-size: 1.5rem;
+    padding: 6px 10px;
+  }
+
+  /* Cuadros de texto (classes) */
+  .class-text-item {
+    padding: 18px;
+  }
+
+  .class-text-item h3 {
+    font-size: 20px;
+  }
+
+  .class-text-item p {
+    font-size: 16px;
+  }
+
+  /* Sección ABOUT imágenes en fila horizontal */
+  .about-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  .about-text {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  /* Formularios */
+  form {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  form input, form textarea {
+    font-size: 1em;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 14px;
+    padding: 1em 10px;
+  }
+}
+
+

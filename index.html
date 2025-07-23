@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WODEX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+  <div class="logo-container">
+    <a href="#" onclick="navigateTo('home')">
+      <img src="imagenes/logowodex.jpg" alt="Logo WODEX" class="logo">
+    </a>
+  </div>
+  <nav class="main-nav">
+    <button onclick="navigateTo('about')">Nosotros</button>
+    <button onclick="navigateTo('classes')">Programaciones y costos</button>
+    <button onclick="navigateTo('productos')">Productos</button>
+    <button onclick="navigateTo('contact')">Contacto</button>
+  </nav>
+</header>
+
+
+  <main>
+    <!-- Inicio -->
+    <section id="home" class="section active">
+      <div class="carousel">
+  <div class="carousel-track">
+    <img src="imagenes/imagen8.jpg" class="carousel-image" alt="Imagen 1">
+    <img src="imagenes/imagen11.jpg" class="carousel-image" alt="Imagen 2">
+    <img src="imagenes/imagen10.jpg" class="carousel-image" alt="Imagen 3">
+  </div>
+
+  <!-- Flechas -->
+  <button class="carousel-btn prev" onclick="prevSlide()">❮</button>
+  <button class="carousel-btn next" onclick="nextSlide()">❯</button>
+
+  <!-- Indicadores -->
+  <div class="carousel-indicators">
+    <span onclick="goToSlide(0)" class="dot active"></span>
+    <span onclick="goToSlide(1)" class="dot"></span>
+    <span onclick="goToSlide(2)" class="dot"></span>
+  </div>
+</div>
+
+
+      <div class="image-menu">
+        <div class="menu-item" onclick="navigateTo('about')">
+          <img src="imagenes/imagen1.jpg" alt="Nosotros">
+          <button class="overlay-button">Nosotros</button>
+        </div>
+        <div class="menu-item" onclick="navigateTo('classes')">
+          <img src="imagenes/ima4.jpg" alt="Programaciones">
+          <button class="overlay-button">Programaciones</button>
+        </div>
+        <div class="menu-item" onclick="navigateTo('productos')">
+          <img src="imagenes/imagen7.jpg" alt="Productos">
+          <button class="overlay-button">Productos</button>
+        </div>
+        <div class="menu-item" onclick="navigateTo('contact')">
+          <img src="imagenes/logowodex.jpg" alt="Contacto">
+          <button class="overlay-button">Contacto</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="about" class="section">
+      <div class="about-gallery">
+  <div class="about-item">
+    <img src="imagenes/ima1.jpg" alt="Imagen 1">
+    <p class="about-caption">Wodex es una empresa profesional dedicada al fitness en diferentes
+ámbitos con una especializacion en Crossfit.</p>
+  </div>
+  <div class="about-item">
+    <img src="imagenes/ima2.jpg" alt="Imagen 2">
+    <p  class="about-caption">Somos lideres a nivel nacional en temas de programación, nutrición y
+educacion. Nuestra vision es muy clara, queremos ser lideres en el
+mercado a nivel mundial y estamos trabajando para lograrlo.</p>
+  </div>
+  <div class="about-item">
+    <img src="imagenes/ima3.jpg" alt="Imagen 3">
+    <p  class="about-caption">Ofrecemos servicios integrales siempre desde la exigencia y preferencia
+de nuestros clientes.</p>
+  </div>
+</div>
+<div class="about-services">
+  <h2>¿QUÉ SERVICIOS OFRECEMOS?</h2>
+  <ul>
+    <li>1. Programaciones generales e individualizadas a atletas a distancia.</li>
+    <li>2. Planificación y programación de gimnasios de CrossFit o fitness funcional.</li>
+    <li>3. Educación continua a coaches (capacitaciones y mentorías).</li>
+    <li>4. Programación de competencias nacionales e internacionales.</li>
+  </ul>
+</div>
+
+
+    </section>
+
+    <!-- Programaciones -->
+    <section id="classes" class="section">
+      <div class="class-text-list">
+  <div class="class-text-item">
+    <h3>Entrenamiento personalizado #1</h3>
+    <p>Costo: $1,250 mensuales</p>
+    <p>¿Qué incluye? Entrenamiento personalizado através de una app (TrueCoach) y todo lo que conlleva.</p>
+<p>Una reunión quincenal agendada a traves de calendly para revisión de programa y progreso.</p>
+<p>Retroalimentación semanal a través de la app.</p>
+  </div>
+
+  <div class="class-text-item">
+    <h3>Entrenamiento personalizado premium</h3>
+    <p>Costo: $1,500 mensuales</p>
+    <p>¿Qué incluye? Entrenamiento personalizado através de una app (TrueCoach) y todo lo que conlleva.</p>
+<p>Una reunión semanal agendada a traves de calendly para revisión de programa y progreso.</p>
+<p>Retroalimentación diaria a través de la app y seguimiento por WhatsApp, revision de videos.</p>
+<p>Posibilidad de cambiar el entrenamiento o adaptarlo de acuerdo a algun imprevisto (viaje, equipo, lesiones). El cambio será inmediato.</p>
+  </div>
+
+  <div class="class-text-item">
+    <h3>Entrenamiento individualizado presencial (Queretaro) </h3>
+    <p>Costo: $4,000 mensuales</p>
+    <p>¿Qué incluye? Entrenamiento personalizado através de una app (TrueCoach) y todo lo que conlleva.</p>
+    <p>Entrenamiento presencial con Wodex Fitness Center. Elección de hora a conveniencia de ambos.</p>
+<p>Una reunión semanal agendada a traves de calendly para revisión de programa y progreso.</p>
+<p>Retroalimentación diaria a través de la app y seguimiento por WhatsApp, revision de videos.</p>
+<p>Posibilidad de cambiar el entrenamiento o adaptarlo de acuerdo a algun imprevisto (viaje, equipo, lesiones). El cambio será inmediato.</p>
+  </div>
+</div>
+
+    </section>
+
+    <!-- Productos -->
+    <section id="productos" class="section">
+      <h2>Productos</h2>
+      <p>Catálogo de productos aquí...</p>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="section">
+      <h2>Contacto</h2>
+      <form>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Correo:</label>
+        <input type="email" id="email" required>
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Enviar</button>.
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 WODEX.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
